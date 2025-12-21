@@ -21,10 +21,10 @@ fbq('init', '2942734025921895');
 fbq('track', 'PageView');
 
 /* 🔥 SUBSCRIBE EVENT WITH PRICE & CURRENCY (ERROR FIX) */
-fbq('track', 'Subscribe', {
-  value: 999.00,   // 👈 yahan apna real price likho
-  currency: 'INR'  // 👈 INR compulsory
-});
+// fbq('track', 'Subscribe', {
+//   value: 999.00,   // 👈 yahan apna real price likho
+//   currency: 'INR'  // 👈 INR compulsory
+// });
 </script>
 
 <noscript>
@@ -120,6 +120,18 @@ body{
     color:#94a3b8;
 }
 </style>
+
+<script>
+function trackJoin() {
+  fbq('track', 'Lead', {
+    content_name: 'Telegram Join',
+    value: 0.00,
+    currency: 'INR'
+  });
+}
+</script>
+
+  
 </head>
 
 <body>
@@ -143,7 +155,7 @@ body{
     </div>
 
     <!-- ⭐ Pixel-safe CTA -->
-    <a href="https://t.me/+MVM_Kky3pN4zMTI9" class="join-btn">
+    <a href="https://t.me/+3Kr7WawwRgk4NWQ1" class="join-btn" onclick="trackJoin()">
         🚀 Join Channel
     </a>
 
@@ -151,4 +163,5 @@ body{
 
 </body>
 </html>
+
 
